@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Registration Form</title>
+  </head>
+  <body>
+    <section id="container">
+      <h1>Registration</h1>
+      <form id="form-element" name="formclub" onsubmit="return false">
+        <!------------------------personal informations------------------------>
+        <section id="first-input-section">
+          <div class="first-input-section-form">
+            <label>Nom:</label>
+            <input type="text" id="nom" class="name" placeholder="Votre Nom" />
+            <p id="nommsg"></p>
+          </div>
+          <div class="first-input-section-form">
+            <label>Prénom:</label>
+            <input
+              type="text"
+              id="prenom"
+              class="name"
+              placeholder="Votre prenom"
+            />
+            <p id="prenommsg"></p>
+          </div>
+          <div class="first-input-section-form">
+            <label>Email:</label>
+            <input type="text" placeholder="prenom.nom@ofppt.ma" id="email" />
+            <p id="emailmsg"></p>
+          </div>
+          <div class="first-input-section-form">
+            <label>Téléphone:</label>
+            <input type="text" placeholder="05/06/07---" id="phone" />
+            <p id="phonemsg"></p>
+          </div>
+        </section>
+
+        <!------------------------Gender informations------------------------>
+        <div class="gender-form">
+          <span>Genre:</span>
+          <div id="pick-gender">
+            <div class="gender-choice">
+              <input type="radio" name="gender" class="dot" value="homme" />
+              <label class="here">Homme</label>
+            </div>
+            <div class="gender-choice">
+              <input type="radio" name="gender" class="dot" value="femme" />
+              <label class="here">Femme</label>
+            </div>
+          </div>
+          <p id="genderselc"></p>
+        </div>
+
+        <!------------------------Groupe informations------------------------>
+        <div id="group-part">
+          <span>Groupe:</span>
+          <div id="group-list" class="groupeselection">
+            <div class="grp-li-choice">
+              <input type="radio" name="group" class="grp" />
+              <label>DW101</label>
+            </div>
+            <div class="grp-li-choice">
+              <input type="radio" name="group" class="grp" />
+              <label>DW102</label>
+            </div>
+            <div class="grp-li-choice">
+              <input type="radio" name="group" class="grp" />
+              <label>DW103</label>
+            </div>
+            <div class="grp-li-choice">
+              <input type="radio" name="group" class="grp" />
+              <label>DM201</label>
+            </div>
+            <div class="grp-li-choice">
+              <input type="radio" name="group" class="grp" />
+              <label>DM202</label>
+            </div>
+          </div>
+          <p id="grpmsg"></p>
+        </div>
+
+        <!------------------------Club informations------------------------>
+        <div class="checkbox-dropdown" id="club-part">
+          <span>Club(s):</span>
+          <div name="formcl">
+            <select
+              class="checkbox-dropdown-list"
+              name="selectgrp"
+              multiple
+              id="selectgrp"
+            >
+              <option value="1" onclick="checkvalid(0)">Informatique</option>
+              <option value="2" onclick="checkvalid(1)">Robotique</option>
+              <option value="3" onclick="checkvalid(2)">Jeu d'echecs</option>
+              <option value="4" onclick="checkvalid(3)">Music</option>
+              <option value="5" onclick="checkvalid(4)">Foot</option>
+              <option value="6" onclick="checkvalid(5)">Theatre</option>
+            </select>
+            <p id="clubmsg"></p>
+          </div>
+        </div>
+        <!------------------------Submit button------------------------>
+        <button type="submit" id="sub">Valider</button>
+        <p id="error"></p>
+      </form>
+    </section>
+
+    <script src="javascriptv1.js"></script>
+  </body>
+</html>
